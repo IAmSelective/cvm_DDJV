@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=3 uid="uid://dp0qv3wtn0l6g"]
+
+[ext_resource type="Script" uid="uid://bbgapembnt2ne" path="res://signal_lambda.gd" id="1_17wla"]
+[ext_resource type="Script" uid="uid://ba5il4kh0fg3p" path="res://ecouteur.gd" id="2_fveku"]
+
+[node name="SignalLambda" type="Button"]
+script = ExtResource("1_17wla")
+
+[node name="Ecouteur" type="Node2D" parent="."]
+script = ExtResource("2_fveku")
+
+[connection signal="pressed" from="." to="Ecouteur" method="_piton_peser"]

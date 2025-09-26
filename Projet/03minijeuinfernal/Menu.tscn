@@ -1,0 +1,44 @@
+[gd_scene load_steps=5 format=3 uid="uid://m4gfu5bwagv3"]
+
+[ext_resource type="Script" uid="uid://c2fesb5jxe8ca" path="res://menu.gd" id="1_uubjt"]
+[ext_resource type="Script" uid="uid://dkmrlebwnqolg" path="res://bouton_collision_disable.gd" id="2_5yleq"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_uubjt"]
+size = Vector2(98, 69)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5yleq"]
+size = Vector2(96, 65)
+
+[node name="Menu" type="Node2D"]
+script = ExtResource("1_uubjt")
+
+[node name="BoutonDemarrer" type="Button" parent="."]
+offset_left = 511.0
+offset_top = 248.0
+offset_right = 609.0
+offset_bottom = 316.0
+text = "DEMARRER"
+script = ExtResource("2_5yleq")
+
+[node name="Area2D" type="Area2D" parent="BoutonDemarrer"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BoutonDemarrer/Area2D"]
+position = Vector2(49, 33.5)
+shape = SubResource("RectangleShape2D_uubjt")
+
+[node name="BoutonQuitter" type="Button" parent="."]
+offset_left = 512.0
+offset_top = 346.0
+offset_right = 608.0
+offset_bottom = 411.0
+text = "QUIT"
+script = ExtResource("2_5yleq")
+
+[node name="Area2D" type="Area2D" parent="BoutonQuitter"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BoutonQuitter/Area2D"]
+position = Vector2(48, 32.5)
+shape = SubResource("RectangleShape2D_5yleq")
+
+[connection signal="area_entered" from="BoutonDemarrer/Area2D" to="BoutonDemarrer" method="_disable_me"]
+[connection signal="area_entered" from="BoutonQuitter/Area2D" to="BoutonQuitter" method="_disable_me"]

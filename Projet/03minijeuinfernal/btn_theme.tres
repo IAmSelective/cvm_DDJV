@@ -1,0 +1,8 @@
+[gd_resource type="Theme" load_steps=2 format=3 uid="uid://q5s1w6556h17"]
+
+[ext_resource type="StyleBox" uid="uid://lxlb70r3iw8g" path="res://won_btn.tres" id="1_bgyes"]
+
+[resource]
+/fonts/dsa = null
+Button/colors/icon_normal_color = Color(0.00784314, 1, 0.0627451, 1)
+Button/styles/normal = ExtResource("1_bgyes")

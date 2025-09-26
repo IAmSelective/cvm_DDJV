@@ -1,0 +1,27 @@
+[gd_scene load_steps=5 format=3 uid="uid://c5dxaejebjop3"]
+
+[ext_resource type="Texture2D" uid="uid://xgfwbjnmbcn5" path="res://assets/Fruits.png" id="1_ioa5s"]
+[ext_resource type="Script" uid="uid://b1kr7dhmww3cw" path="res://scripts/Fruit.gd" id="2_ojx6h"]
+[ext_resource type="PackedScene" path="res://Librairie/Oscillation.tscn" id="3_h0odp"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_xkhmj"]
+
+[node name="Fruit" type="Node2D"]
+scale = Vector2(2, 2)
+script = ExtResource("2_ojx6h")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_ioa5s")
+hframes = 6
+vframes = 2
+
+[node name="Area2D" type="Area2D" parent="Sprite2D"]
+
+[node name="Collision" type="CollisionShape2D" parent="Sprite2D/Area2D"]
+shape = SubResource("CapsuleShape2D_xkhmj")
+
+[node name="Oscillation" parent="." node_paths=PackedStringArray("node_to_affect") instance=ExtResource("3_h0odp")]
+angle_amplitude = 0.6
+node_to_affect = NodePath("../Sprite2D")
+
+[connection signal="area_entered" from="Sprite2D/Area2D" to="." method="_on_knight_touch"]

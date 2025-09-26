@@ -1,0 +1,34 @@
+[gd_scene load_steps=5 format=3 uid="uid://cv8yo1hmps1ir"]
+
+[ext_resource type="Texture2D" uid="uid://bied0xhg3wnxw" path="res://foret/grass1.png" id="1_0oidq"]
+[ext_resource type="Texture2D" uid="uid://bdh808ebhqlg0" path="res://foret/grass2.png" id="2_qea54"]
+[ext_resource type="Texture2D" uid="uid://ba56mc5phlp3i" path="res://foret/grass4.png" id="3_4svuf"]
+[ext_resource type="PackedScene" uid="uid://cdkbr362e14nb" path="res://Librairie/Oscillation.tscn" id="4_qea54"]
+
+[node name="Gazon" type="Node2D"]
+
+[node name="Grass1" type="Sprite2D" parent="."]
+position = Vector2(32, -5)
+scale = Vector2(2.57692, 1.75926)
+texture = ExtResource("1_0oidq")
+offset = Vector2(0, -12)
+
+[node name="Grass2" type="Sprite2D" parent="."]
+position = Vector2(-22, -5)
+texture = ExtResource("2_qea54")
+offset = Vector2(0, -17)
+
+[node name="Grass3" type="Sprite2D" parent="."]
+position = Vector2(4.76837e-07, 18)
+scale = Vector2(1.75, 1.625)
+texture = ExtResource("3_4svuf")
+offset = Vector2(0, -15)
+
+[node name="Oscillation" parent="." node_paths=PackedStringArray("node_to_affect") instance=ExtResource("4_qea54")]
+node_to_affect = NodePath("../Grass1")
+
+[node name="Oscillation2" parent="." node_paths=PackedStringArray("node_to_affect") instance=ExtResource("4_qea54")]
+node_to_affect = NodePath("../Grass2")
+
+[node name="Oscillation3" parent="." node_paths=PackedStringArray("node_to_affect") instance=ExtResource("4_qea54")]
+node_to_affect = NodePath("../Grass3")

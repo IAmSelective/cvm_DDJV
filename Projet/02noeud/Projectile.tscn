@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=3 uid="uid://gh5l3ja22ywx"]
+
+[ext_resource type="Script" uid="uid://dj3fg53njaiwj" path="res://projectile.gd" id="1_e7peq"]
+[ext_resource type="Texture2D" uid="uid://ow2p28q5r5p7" path="res://foret/projectile.png" id="2_e7peq"]
+
+[node name="Projectile" type="Node2D"]
+script = ExtResource("1_e7peq")
+vitesse = 300
+
+[node name="stone" type="Sprite2D" parent="."]
+scale = Vector2(0.990385, 1.26563)
+texture = ExtResource("2_e7peq")

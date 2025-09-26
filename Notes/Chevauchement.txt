@@ -1,0 +1,4 @@
+3 types de collisions :
+	Chevauchement
+	Rigid Body
+	Tracer

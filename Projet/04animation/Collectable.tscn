@@ -1,0 +1,28 @@
+[gd_scene load_steps=4 format=3 uid="uid://tvu0eiu7dmdg"]
+
+[ext_resource type="Texture2D" uid="uid://b37ff3c8yusdk" path="res://chinese_icons.png" id="1_fc22a"]
+[ext_resource type="Script" uid="uid://dlwu8q6t6e0y5" path="res://collectable.gd" id="2_iw8er"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_fc22a"]
+radius = 8.0479
+height = 16.6707
+
+[node name="Collectable" type="Node2D"]
+
+[node name="Collectable" type="Sprite2D" parent="."]
+texture_filter = 1
+scale = Vector2(3.47917, 3.47917)
+texture = ExtResource("1_fc22a")
+hframes = 3
+vframes = 3
+script = ExtResource("2_iw8er")
+
+[node name="Area2D" type="Area2D" parent="Collectable"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Collectable/Area2D"]
+position = Vector2(-0.57485, 5.96046e-08)
+shape = SubResource("CapsuleShape2D_fc22a")
+
+[node name="Timer" type="Timer" parent="."]
+
+[connection signal="area_entered" from="Collectable/Area2D" to="Collectable" method="_on_bat_entered"]

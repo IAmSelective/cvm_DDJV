@@ -1,0 +1,42 @@
+[gd_scene load_steps=7 format=3 uid="uid://de25trp5fucjt"]
+
+[ext_resource type="Script" uid="uid://v8knhiw85wyx" path="res://niveau.gd" id="1_7ufvj"]
+[ext_resource type="PackedScene" uid="uid://c72ifaa03a5w8" path="res://paysage.tscn" id="1_sdggm"]
+[ext_resource type="PackedScene" uid="uid://gh5l3ja22ywx" path="res://Projectile.tscn" id="3_pcds7"]
+[ext_resource type="PackedScene" uid="uid://bt4wbe5gthhow" path="res://Articulation.tscn" id="4_3s1m1"]
+[ext_resource type="PackedScene" uid="uid://cv8yo1hmps1ir" path="res://gazon.tscn" id="16_4q20l"]
+
+[sub_resource type="GDScript" id="GDScript_pcds7"]
+script/source = "extends Node2D
+"
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_7ufvj")
+
+[node name="Paysage" parent="." instance=ExtResource("1_sdggm")]
+position = Vector2(52, -53)
+
+[node name="Gazon" parent="." instance=ExtResource("16_4q20l")]
+position = Vector2(765, 576)
+script = SubResource("GDScript_pcds7")
+
+[node name="Gazon2" parent="." instance=ExtResource("16_4q20l")]
+position = Vector2(1013, 600)
+script = SubResource("GDScript_pcds7")
+
+[node name="Gazon3" parent="." instance=ExtResource("16_4q20l")]
+position = Vector2(35, 442)
+script = SubResource("GDScript_pcds7")
+
+[node name="Projectile" parent="." instance=ExtResource("3_pcds7")]
+position = Vector2(730, 492)
+
+[node name="Projectile2" parent="." instance=ExtResource("3_pcds7")]
+position = Vector2(818, 478)
+
+[node name="Projectile3" parent="." instance=ExtResource("3_pcds7")]
+position = Vector2(630, 553)
+
+[node name="Articulation" parent="." instance=ExtResource("4_3s1m1")]
+position = Vector2(581, 203)
+scale = Vector2(0.6, 0.6)

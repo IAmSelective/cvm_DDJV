@@ -1,0 +1,30 @@
+[gd_scene load_steps=3 format=3 uid="uid://lobo3u2qms33"]
+
+[ext_resource type="FontFile" uid="uid://xbul28t8c6pu" path="res://assets/Alex Handwritten Regular.ttf" id="1_7urb4"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_g5nnr"]
+font = ExtResource("1_7urb4")
+font_size = 41
+outline_size = 14
+outline_color = Color(0, 0, 0, 1)
+
+[node name="Score" type="Control"]
+layout_mode = 3
+anchor_right = 0.336
+anchor_bottom = 0.279
+offset_right = -0.0720215
+offset_bottom = 0.207993
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.138
+offset_left = 3.0
+offset_top = 2.0
+offset_right = 6.0
+offset_bottom = 0.0220032
+text = "Score : 0"
+label_settings = SubResource("LabelSettings_g5nnr")

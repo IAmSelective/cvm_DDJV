@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://jrwxoeuosm4l"]
+
+[ext_resource type="Texture2D" uid="uid://cpkb11cw58d5c" path="res://foret/chat.png" id="1_dg5i7"]
+
+[node name="Chat" type="Node2D"]
+
+[node name="Chat" type="Sprite2D" parent="."]
+position = Vector2(2, 5.72205e-06)
+scale = Vector2(2.1, 2.1)
+texture = ExtResource("1_dg5i7")

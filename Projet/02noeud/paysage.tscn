@@ -1,0 +1,90 @@
+[gd_scene load_steps=17 format=3 uid="uid://c72ifaa03a5w8"]
+
+[ext_resource type="Texture2D" uid="uid://eydbat087v8k" path="res://foret/bg_top8.png" id="1_qyol7"]
+[ext_resource type="Script" uid="uid://bpmfm1x57207o" path="res://paysage.gd" id="1_yw5qa"]
+[ext_resource type="Texture2D" uid="uid://l86f4iwa8k84" path="res://foret/ground8.png" id="2_yw5qa"]
+[ext_resource type="Texture2D" uid="uid://b3itk22rkw3tp" path="res://foret/ground2.png" id="3_gpjiu"]
+[ext_resource type="Texture2D" uid="uid://dhor1saq68t26" path="res://foret/treehouse.png" id="4_ep5kr"]
+[ext_resource type="Texture2D" uid="uid://cupaosbgmaavi" path="res://foret/ruin3.png" id="5_6wjr0"]
+[ext_resource type="Texture2D" uid="uid://bn5vwu4w0sa57" path="res://foret/stone1.png" id="6_3rfit"]
+[ext_resource type="Texture2D" uid="uid://dfp74nciq2o82" path="res://foret/crack1.png" id="7_7ng81"]
+[ext_resource type="Texture2D" uid="uid://cei5ggsx0lst6" path="res://foret/brick1.png" id="8_e81fd"]
+[ext_resource type="Texture2D" uid="uid://1duq52lup1ra" path="res://foret/tree1.png" id="9_ym5we"]
+[ext_resource type="Texture2D" uid="uid://crnqjrimd8uya" path="res://foret/tree2.png" id="10_o6r1j"]
+[ext_resource type="Texture2D" uid="uid://btc2flvt03bb" path="res://foret/bush2.png" id="11_egrlx"]
+[ext_resource type="Texture2D" uid="uid://b6s5j37l2x6rk" path="res://foret/bush3.png" id="12_e4wtr"]
+[ext_resource type="Texture2D" uid="uid://b1qeh01fkmbry" path="res://foret/board2.png" id="13_jkrt1"]
+[ext_resource type="Texture2D" uid="uid://b4aknxj8smyek" path="res://foret/top3.png" id="14_cvrwe"]
+[ext_resource type="Texture2D" uid="uid://doqn6y3dqcaco" path="res://foret/tree5.png" id="15_e5jwy"]
+
+[node name="Paysage" type="Node2D"]
+rotation = 0.0353835
+script = ExtResource("1_yw5qa")
+
+[node name="BgTop8" type="Sprite2D" parent="."]
+position = Vector2(560.5, 262.5)
+scale = Vector2(4.71659, 2.06173)
+texture = ExtResource("1_qyol7")
+
+[node name="Ground8" type="Sprite2D" parent="."]
+position = Vector2(965, 434)
+scale = Vector2(1.33589, 1.97482)
+texture = ExtResource("2_yw5qa")
+
+[node name="Ground2" type="Sprite2D" parent="."]
+position = Vector2(532.822, 654.884)
+rotation = 3.15035
+scale = Vector2(5.4274, 2.30976)
+texture = ExtResource("3_gpjiu")
+
+[node name="Treehouse" type="Sprite2D" parent="."]
+position = Vector2(475, 286)
+scale = Vector2(0.426119, 0.631667)
+texture = ExtResource("4_ep5kr")
+
+[node name="Ruin3" type="Sprite2D" parent="."]
+position = Vector2(1008, 236)
+texture = ExtResource("5_6wjr0")
+
+[node name="Stone1" type="Sprite2D" parent="."]
+position = Vector2(271, 486)
+texture = ExtResource("6_3rfit")
+
+[node name="Crack1" type="Sprite2D" parent="."]
+position = Vector2(1057, 282)
+texture = ExtResource("7_7ng81")
+
+[node name="Brick1" type="Sprite2D" parent="."]
+position = Vector2(209, 470)
+texture = ExtResource("8_e81fd")
+
+[node name="Tree1" type="Sprite2D" parent="."]
+position = Vector2(65, 487)
+scale = Vector2(1.29592, 1.29592)
+texture = ExtResource("9_ym5we")
+
+[node name="Tree2" type="Sprite2D" parent="."]
+position = Vector2(208, 659)
+texture = ExtResource("10_o6r1j")
+
+[node name="Bush2" type="Sprite2D" parent="."]
+position = Vector2(1057, 519)
+texture = ExtResource("11_egrlx")
+
+[node name="Bush3" type="Sprite2D" parent="."]
+position = Vector2(446, 454)
+texture = ExtResource("12_e4wtr")
+
+[node name="Board2" type="Sprite2D" parent="."]
+position = Vector2(899, 502)
+texture = ExtResource("13_jkrt1")
+
+[node name="Top3" type="Sprite2D" parent="."]
+position = Vector2(624, 187)
+scale = Vector2(0.180203, 0.32197)
+texture = ExtResource("14_cvrwe")
+
+[node name="Tree5" type="Sprite2D" parent="."]
+position = Vector2(809, 251)
+scale = Vector2(0.460526, 0.660883)
+texture = ExtResource("15_e5jwy")

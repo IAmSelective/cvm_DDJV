@@ -1,0 +1,9 @@
+SIN:
+
+sin(2PI/ Periode * temps_Total)
+
+Delta = Delta destination - Delta source --> Position relative
+
+distance = racine de a2+b2 
+
+Direction noramlisé = (x / distance, y / distance) --> Cela donne 1
